@@ -1,0 +1,53 @@
+package database;
+import java.util.*;
+/*
+ * Used for debugging, not important
+ */
+public class DatabaseTest {
+	private static Database db = new Database();
+	public static void main(String args[]) {		
+		
+		printQuiz();
+		Vector<String> newQuestion = new Vector<String>();
+		Vector<Vector<String>> newAnswerSet = new Vector<Vector<String>>();
+		newQuestion.add("Is this question going to work?");
+		newAnswerSet.add(new Vector<String>());
+		newAnswerSet.get(0).add("Yes!");
+		
+		db.addQuestion(1, Database.QUESTION_RESPONSE, newQuestion, newAnswerSet);
+		printQuiz();
+		newQuestion = new Vector<String>();
+		newAnswerSet = new Vector<Vector<String>>();
+		newQuestion.add("Let's try");
+		newQuestion.add("something");
+		newAnswerSet.add(new Vector<String>());
+		newAnswerSet.get(0).add("OK!");
+		
+		db.insertQuestion(1, 1, Database.FILL_IN_THE_BLANK, newQuestion, newAnswerSet);
+		printQuiz();
+		
+		//db.deleteQuestion(0, 6);
+		//printQuiz();
+	}
+	
+	public static void printQuiz() {
+		Vector<String> questions;
+		Vector<Vector<String>> answers;
+		int questionNum;
+		int num = db.getNumQuestions(1);
+		for(int x = 0; x < num; x++) {
+			questions = db.getQuestion(1, x);
+			answers = db.getAnswers(1, x);
+			questionNum = x + 1;
+			System.out.println("Question " + questionNum + ":");
+			for (int y = 0; y < questions.size(); y++) {
+				System.out.println(questions.get(y));
+			}
+			System.out.println("Answers:");
+			for (int y = 0; y < answers.size(); y++) {
+				System.out.println(answers.get(0).get(y));
+			}
+			System.out.println();
+		}
+	}
+}

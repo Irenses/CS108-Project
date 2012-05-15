@@ -1,0 +1,233 @@
+var currentMsgTab = 0;
+var currentQuizTab = 0;
+var currentStatsTab = 0;
+var curLeaderTab = 0; 
+var currentAchievement = 0;
+
+var maxWidth = 0;
+var elemWidth = 0;
+
+$(document).ready(function() {
+
+//    $('ul').each(function() {
+//        elemWidth = parseInt($(this).css('width'));
+//        if (parseInt($(this).css('width')) > maxWidth) {
+//            maxWidth = elemWidth;
+//        }
+//    });
+//    
+//    $('ul').each(function() {
+//        $(this).css('width', maxWidth + "px");
+//    });
+
+   $("#tabbed-quiz-leader-box .tabs li:eq(0) a").css("border-left", "none");
+	   
+   $("#tabbed-quiz-leader-box .tabs li a").click(function() { 
+	  openLeaderTab($(this)); return false; 
+   });
+	   
+   $("#tabbed-quiz-leader-box .tabs li a:eq("+curLeaderTab+")").click();
+
+   //
+	
+   $("#tabbed-message-box .tabs li:eq(0) a").css("border-left", "none");
+   
+   $("#tabbed-message-box .tabs li a").click(function() { 
+      openMsgTab($(this)); return false; 
+   });
+   
+   $("#tabbed-message-box .tabs li a:eq("+currentMsgTab+")").click();
+   
+   //
+   
+   $("#tabbed-quiz-box .tabs li:eq(0) a").css("border-left", "none");
+   
+   $("#tabbed-quiz-box .tabs li a").click(function() { 
+      openQuizTab($(this)); return false; 
+   });
+   
+   $("#tabbed-quiz-box .tabs li a:eq("+currentQuizTab+")").click();
+   
+   //
+   
+   $("#tabbed-quiz-stats-box .tabs li:eq(0) a").css("border-left", "none");
+   
+   $("#tabbed-quiz-stats-box .tabs li a").click(function() { 
+      openStatsTab($(this)); return false; 
+   });
+   
+   $("#tabbed-quiz-stats-box .tabs li a:eq("+currentStatsTab+")").click();
+   
+   //
+   
+   $("#achievement-tabs ul li a").click(function() { 
+      openAchievement($(this)); return false; 
+   });
+   
+   $("#achievement-tabs ul li a:eq("+currentAchievement+")").click();
+
+   //
+   
+   $("#send-message-button").live('click', function() {
+     	$("#message-pop").slideFadeToggle(function() {
+     		$("#message-pop").css("visibility", "visible");
+   			$("#subject-field").focus();
+     	});
+   		return false;
+   });
+   
+   $("#add-friend-button").live('click', function() {
+   		$("#friend-pop").slideFadeToggle(function() {
+   			$("#friend-pop").css("visibility", "visible");
+   		});
+   		return false;
+   });
+   
+   $("#announce-button").live('click', function() {
+  		$("#announce-pop").slideFadeToggle(function() {
+  			$("#announce-pop").css("visibility", "visible");
+  		});
+  		return false;
+  });
+        	
+   $("#msg-close-button").live('click', function() {
+  		$("#message-pop").slideFadeToggle(function() {
+  		   	$("#message-pop").css("visibility", "hidden");
+  		});
+   		return false; 
+   });
+   
+   $("#announce-close-button").live('click', function() {
+ 		$("#announce-pop").slideFadeToggle(function() {
+ 		   	$("#announce-pop").css("visibility", "hidden");
+ 		});
+  		return false; 
+  });
+   
+//   $("#friend-close-button").live('click', function() {
+//   		$("#friend-pop").slideFadeToggle(function() {
+//   			$("#friend-pop").css("visibility", "hidden");
+//   		});
+//   		return false; 
+//   });
+   
+   $("#incorrect-login-close-button").live('click', function() {
+  		$("#incorrect-login-pop").slideFadeToggle(function() {
+  			$("#incorrect-login-pop").css("visibility", "hidden");
+  			$("#userField").focus();
+  		});
+  		return false; 
+   });
+   
+   $("#incorrect-creation-close-button").live('click', function() {
+  		$("#incorrect-creation-pop").slideFadeToggle(function() {
+  			$("#incorrect-creation-pop").css("visibility", "hidden");
+  			$("#user-createField").focus();
+  		});
+  		return false; 
+   });
+   
+   //
+            
+/*
+   $(".placeholderText").focus(function(srcc)
+    {
+        if ($(this).val() == $(this)[0].title)
+        {
+            $(this).removeClass("placeholderTextActive");
+            $(this).val("");
+        }
+    });
+    $(".placeholderText").blur(function()
+    {
+        if ($(this).val() == "")
+        {
+            $(this).addClass("placeholderTextActive");
+            $(this).val($(this)[0].title);
+        }
+    });
+    $(".placeholderText").blur();
+*/
+    
+    //
+    
+/*
+    
+     $("#form1").validate({ 
+    	rules: { 
+           name: "required",// simple rule, converted to {required:true} 
+           email: {// compound rule 
+           required: true, 
+           email: true 
+        }, 
+	    url: { 
+           url: true 
+	    }, 
+        comment: { 
+           required: true 
+        } 
+        }, 
+   	    messages: { 
+           comment: "Please enter a comment." 
+	    } 
+	}); 
+	
+*/
+
+});
+
+$.fn.slideFadeToggle = function(easing, callback) {
+	return this.animate({ opacity: 'toggle', height: 'toggle' }, "fast", easing, callback);
+};
+
+function openQuizTab(clickedTab) {
+   var thisTab = $("#tabbed-quiz-box .tabs a").index(clickedTab);
+   $("#tabbed-quiz-box .tabs li a").removeClass("active");
+   $("#tabbed-quiz-box .tabs li a:eq("+thisTab+")").addClass("active");
+   $("#tabbed-quiz-box .tabbed-content").hide();
+   $("#tabbed-quiz-box .tabbed-content:eq("+thisTab+")").show();
+   currentQuizTab = thisTab;
+}
+
+function openMsgTab(clickedTab) {
+   var thisTab = $("#tabbed-message-box .tabs a").index(clickedTab);
+   $("#tabbed-message-box .tabs li a").removeClass("active");
+   $("#tabbed-message-box .tabs li a:eq("+thisTab+")").addClass("active");
+   $("#tabbed-message-box .tabbed-content").hide();
+   $("#tabbed-message-box .tabbed-content:eq("+thisTab+")").show();
+   currentMsgTab = thisTab;
+}
+
+function openLeaderTab(clickedTab) {
+	   var thisTab = $("#tabbed-quiz-leader-box .tabs a").index(clickedTab);
+	   $("#tabbed-quiz-leader-box .tabs li a").removeClass("active");
+	   $("#tabbed-quiz-leader-box .tabs li a:eq("+thisTab+")").addClass("active");
+	   $("#tabbed-quiz-leader-box .tabbed-content").hide();
+	   $("#tabbed-quiz-leader-box .tabbed-content:eq("+thisTab+")").show();
+	   curLeaderTab = thisTab;
+	}
+
+function openStatsTab(clickedTab) {
+   var thisTab = $("#tabbed-quiz-stats-box .tabs a").index(clickedTab);
+   $("#tabbed-quiz-stats-box .tabs li a").removeClass("active");
+   $("#tabbed-quiz-stats-box .tabs li a:eq("+thisTab+")").addClass("active");
+   $("#tabbed-quiz-stats-box .tabbed-content").hide();
+   $("#tabbed-quiz-stats-box .tabbed-content:eq("+thisTab+")").show();
+   currentStatsTab = thisTab;
+}
+
+function openAchievement(clickedAchievement) {
+   var thisAchievement = $("#achievement-tabs ul li a").index(clickedAchievement);
+   
+   //$("#achievement-tabs ul li a").removeClass("active");
+   //$("#achievement-tabs ul li a:eq("+thisAchievement+")").addClass("active");
+   
+   $("#achievement-tabs ul li a").addClass("transparent-image");
+   $("#achievement-tabs ul li a:eq("+thisAchievement+")").removeClass("transparent-image");
+   
+   $(".achievement-description").hide();
+   $(".achievement-description:eq("+thisAchievement+")").show();
+   currentAchievement = thisAchievement;
+}
+
+

@@ -1,0 +1,1135 @@
+/* CSS Document */
+
+/* Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0b1 | 201101 
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Font Install */
+
+@font-face {
+	font-family: DoodlePenLimited;
+	src: url("../fonts/DoodlePen_Limited.ttf");
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; color: black; }
+
+h1 {font-size:48px; font-family: DoodlePenLimited; }
+h2 {font-size:20px; font-family: DoodlePenLimited; }
+h3 {font-size:24px; font-family: DoodlePenLimited; }
+h4 {font-size:14px; }
+h5 {font-size:14px; }
+h6 {font-size:14px; }
+
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin: 0; }
+
+
+/* Text Elements */
+
+/* p { color:black; font-size:12px; line-height:150%; } */
+p.left { margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+p.right { margin: 1.5em 0 1.5em 1.5em; padding: 0; }
+
+/*a:not(.button) { }
+a:not(.button):link {color: #00f;}
+a:not(.button):visited {color: #0f0;}
+a:not(.button):active {color: #000;}
+a:not(.button):focus {color: #666;}
+a:not(.button):hover {color: #f00;}*/
+
+a:not(.button) { }
+a:not(.button):link {color: #00f;}
+a:not(.button):visited {color: #00f;}
+a:not(.button):active {color: #000;}
+a:not(.button):focus {color: #666;}
+a:not(.button):hover {color: #f00;}
+
+blockquote {color: #000; font-size:12px;}
+
+strong {font-weight: bold;}
+em {font-style: italic;}
+
+
+/* Images */
+
+
+
+/* Lists */
+
+ul { list-style-type: none; }
+ol { list-style-type: decimal; }
+
+ul li { color: #000; font-size: 12px; } 
+ol li { color: #000; font-size: 12px; } 
+
+dl { }
+dt { }
+dd { }
+
+
+/* Tables */
+
+table 				{width:100%;}
+
+tr 					{	 }
+.odd 				{background-color: #eee; }
+.even 				{background-color: #fff; }
+
+th 					{font-weight: bold; }
+thead, th 			{background: #ccc; }
+
+tbody 				{ 	}
+th, td, caption 	{ 	}
+
+tfoot 				{ 	}
+.tfooter 			{background-color: #ccc; text-align: center; font-style: italic; }
+
+caption 			{background: #efefef; }
+
+
+/* Miscellaneous */
+
+sup, sub 			{line-height: 0; }
+
+abbr, acronym 		{ border-bottom: 1px dotted #666; }
+address 			{		}
+del 				{background: #FFCECE; color: #f00; }
+
+code, pre 			{ background-color: #FF9; padding: 2px; margin: 4px 25px; 
+						font-family: "Courier New", Courier, monospace; font-size: 12px }
+br 					{clear: left; }
+
+.copyright-text 	{ font-size:80%; font-style: italic; color: #333; }
+.footer-text 		{ font-size:80%; font-style: normal; color: #666; }
+
+.title 				{ font-size:18px; font-weight: bold; color: #333; }
+.subtitle 			{ font-size:14px; font-style: italic; color: #333; }
+
+.artist  			{ font-size:16px; font-weight: bold; color: #333; }
+.author 			{ font-size:14px; font-weight: bold; color: #555; }
+.editor				{ font-size:14px; font-style: italic; color: #555; }
+
+.pub-date 			{ font-size:10px; font-style: italic; color: #555; }
+.artcle-date 		{ font-size:10px; font-style: italic; color: #555; }
+.location 			{ font-size:10px; font-style: italic; color: #555; }
+
+.float-right { float:right; }
+.float-left { float:left; }
+.clear { clear:both; }
+
+.hide { display: none; }
+.block { display: block; }
+.inline { display: inline; }
+
+.first { font-weight: bold; }
+.last { font-weight: bold; }
+.left { font-weight: bold; text-align: left; }
+.right { font-weight: bold; text-align: right; }
+
+.added {background: #D7D7FF; }
+.removed { background: #FFCECE; color:#f00; }
+.changed { background: #FFB; }
+
+
+/* Success, info, notice and error/alert boxes - from Blueprint CSS Framework */
+
+	
+	
+/* Global */
+
+html {  }
+body { 
+	/*background-color: #E8DDCA;*/
+	background-image: url('../images/background2_cropped.jpg');
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", sans-serif;
+} 
+	
+	
+		
+/* For Template */
+
+/* Adds white buffer space on the left and the right */
+#outer { 
+	width: 650px; 
+	margin: 20px auto;
+	background-color: white;
+	border: 2px solid black; 
+}
+
+#wrapper { 
+	width: 600px; 
+	margin: 0 auto; /* 0 top and bottom, auto left and right; works same as padding */
+					/* one value would be the same on all sides */
+					/* four values goes clockwise */
+	background-color: white;
+	overflow-x: hidden; 
+}
+
+#logo { 
+	float: left;
+	font-family: DoodlePenLimited;
+	/*margin: 40px 0 15px 0;*/
+	margin: 0px 0 15px 0; 
+}
+
+#nav-bar { 
+	float: right; 
+}
+
+/* In the container nav-bar, find an unordered list and
+apply the following style to any li's in there. */
+#nav-bar ul li {
+	/* Instead of being displayed on top of each other, 
+	they'll display left to right. */
+	display: inline; 
+	font-size: 20px;
+	font-weight: bold;
+	font-family: DoodlePenLimited;
+	margin: 0 5px; 
+}
+
+#nav-bar ul {
+	/*margin-top: 60px; 120px right*/
+	margin-top: 20px;
+	margin-right: 110px; 
+}
+
+.transparent-image {
+	opacity: 0.3; 
+}
+
+#achievements {
+	text-align: center;
+	padding-bottom: 5px; 
+}
+
+#achievements ul li {
+	display: inline;
+	margin: 0 5px; 
+}
+
+.achievement-description {
+	/*display: none;*/
+}
+
+.achievement-title {
+	font-weight: bold; 
+}
+
+#footer {
+	clear: both; 
+	text-align: center;
+	padding-bottom: 15px; 
+}
+
+#footer ul li { 
+	display: inline;
+	margin: 0 5px 0 5px;
+}
+
+
+
+
+
+
+
+
+
+
+/* For Home Page */ 
+
+.box {
+	background: white;
+	border: 2px solid black;
+}
+
+.box-content {
+	padding: .5em 1em .5em 2em;
+}
+
+.box-content li {
+	font-size: 14px;
+}
+
+.tabbed-box {
+	background: white; 
+	border: 2px solid black;
+}
+
+.tabbed-box .tabs li {
+	list-style: none;
+	float: left; 
+}
+
+.tabbed-box .tabs li a {
+	display: block; 
+	padding: 5px 0; 
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none; 
+	color: #888; 
+	background: white; 
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.tabbed-box .tabs li:first-child a {
+	border-left: none;
+}
+
+.tabbed-box .tabs li a:hover {
+	color: #333; 
+}
+
+.tabbed-box .tabs li a:focus {
+	outline: none; 
+}
+
+.tabbed-box .tabs li a.active {
+	background: #F3F5F7; /*#fff*/
+	color: #333; 
+	border-bottom: 1px solid #F3F5F7; /*#fff*/
+}
+
+.tabbed-content {
+	overflow-y: scroll;
+	background-color: #F3F5F7; 
+}				
+
+#tabbed-message-box {
+	width: 374px;
+	height: 120px;
+}
+
+#tabbed-message-box .tabbed-content {
+	padding: 1em 1em 1em 1em; 
+	height: 65px;
+	overflow-x: scroll;
+}
+
+#tabbed-message-box .tabs li a {
+	width: 124px; 
+}
+
+#tabbed-quiz-box {
+	width: 596px;
+	height: 260px;
+}
+
+#tabbed-quiz-box .tabbed-content {
+	height: 234px;
+}
+
+#tabbed-quiz-box .tabs li a {
+	width: 198px; 
+}	
+
+#fun-fact { 
+	font-size: 13.5px;
+	text-align: center; 
+	padding-bottom: 5px;
+	clear: both;
+}
+
+#a-whole { 
+	float: left;
+}
+
+#a-box  {
+	width: 200px;
+	height: 120px;
+	overflow-y: auto;
+	overflow-x: hidden; 
+	background: white;
+	border: 2px solid black;
+}
+
+#a-box ul {
+	list-style-type: disc;
+	padding: .5em .5em .5em 2em;
+	width: 156px; /*old width: 340px, then 160*/
+}
+
+#a-box ul li {
+	font-size: 14px;
+}
+
+#message-center { 
+	float: right;
+}
+
+#quizzes { 
+	clear: both; 
+}
+
+#recent-boxes {
+	width: 287px;
+	/*overflow-x: auto;*/
+	height: 150px; 
+	overflow-y: auto;
+}
+
+#recent-boxes ul {
+	list-style-type: disc; 
+}
+
+#recent-activity {
+	float: left; 
+}
+
+#friend-activity {
+	float: right; 
+}
+
+
+
+
+
+
+
+
+/* For Profile Page */
+
+#details-box {	
+	clear: both; 
+	float: left; 
+	width: 275px;
+	margin: 15px 0 0 5px; 
+}
+
+#details-box ul {
+	list-style-type: none; 
+}
+
+#details-box ul li {
+	font-size: 16px;
+	margin: 5px 0; 
+}
+
+#details-box ul li span {
+	font-weight: bold; 
+	color: #00f; 
+}
+
+#welcome-message {
+	clear: both; 
+	text-align: center;
+	padding-bottom: 10px;
+	margin-right: 50px;
+	/*clear: left; 
+	float: left;
+	margin-left: 5px;*/
+}
+
+.profile-button {
+	margin-top: 10px;
+ 	margin-left: 35px; 
+}
+
+#user-activity {
+	float: right; 
+	margin-right: 15px;
+	/*margin: -18px 15px 0 0;*/
+}
+
+#user-activity-box {
+	width: 300px;
+	height: 140px;
+	overflow-y: auto;
+	/*overflow-x: auto;*/
+	border: 2px solid black; 
+}
+
+#user-activity-box ul {
+	list-style-type: disc;
+}
+
+#friends-list {
+	width: 255px;
+	clear: both;
+	padding-top: 18px;
+}
+
+#friends-list-box ul {
+	padding: 1em 1em 1em 2em;
+	list-style-type: disc;
+}
+
+#friends-list-box ul li {
+	font-size: 14px; 
+}
+
+#friends-list-box {
+	float: left;
+	width: 255px;
+	height: 147px; 
+	overflow-y: scroll;
+	border: 2px solid black; 
+}
+
+#quiz-stats {
+	float: right;
+	margin: -21px 15px 0 0;
+}
+
+#tabbed-quiz-stats-box {
+	height: 147px;
+	width: 300px; 
+}
+
+#tabbed-quiz-stats-box .tabbed-content {
+	height: 122px;
+}
+
+#tabbed-quiz-stats-box .tabs li a {
+	width: 149px; 
+}
+
+#admin-buttons-profile {
+	clear: both;
+	text-align: center;  
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+#admin-buttons-profile ul {		
+
+}
+
+#admin-buttons-profile ul li {
+	display: inline;
+}
+
+#admin-buttons-profile p {
+	font-family: DoodlePenLimited;
+}
+
+#add-friend-button {
+	margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+/* For Login Page */
+
+#login-outer {
+	width: 425px;
+	height: 465px;
+	/*background-color: white;
+	border: 2px solid black;*/
+}
+
+#login-wrapper { 
+	width: 350px; 
+	margin: 25px auto; 
+}
+
+/* Working way to center */ 
+.centered {
+	position:absolute; 
+	top:0; 
+	bottom:0; 
+	left:0; 
+	right:0;
+	margin:auto; 
+}
+
+.content-box {
+	margin-bottom: 10px;
+	padding: 10px 10px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: .4em;
+	-webkit-border-radius: .4em; 
+	-moz-border-radius: .4em;
+}
+
+.header-box {
+	text-align: center; 
+}
+
+
+/*
+.placeholderText {
+
+}
+
+.placeholderTextActive {
+	color: #a1a1a1; 
+	font-style: italic; 
+}
+*/
+
+
+.fieldBox {
+	display: inline-block;
+	width: 313px; 
+	/*font-size: 14px;
+	font-family: Helvetica;*/
+	font: 14px "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", sans-serif; 
+	padding: .3em;
+	border-radius: .4em;
+	-webkit-border-radius: .4em; 
+	-moz-border-radius: .4em;
+	margin-top: 3px;
+	
+}
+
+#passField {
+	width: 200px;
+}
+
+#create-button {
+	margin-left: 130px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Quiz Description Page */
+
+#quiz-title {
+	clear: both;
+	text-align: center;
+	text-decoration: underline;
+	font-size: 20px;
+	color: green;
+}
+
+#star-rating {
+	clear: both;
+	padding-left: 65px;
+	padding-bottom: 20px;
+	margin-top: -20px;
+	/*padding: 5px 0 5px 260px;*/
+}
+
+#quiz-details-box {	
+	clear: both; 
+	float: left; 
+	width: 380px;
+	margin-left: 5px; 
+}
+
+#quiz-details-box p span {
+	font-weight: bold; 
+	color: #00f; 
+}
+
+#new-quiz-details-box {	
+	clear: both; 
+	float: left; 
+	/*old width: 336px;*/
+	width: 380px;
+	margin-left: 5px; 
+	/*border: 1px solid black;*/
+}
+
+
+#new-quiz-details-box p {
+	margin-bottom: 5px; 
+}
+
+#new-quiz-details-box p span {
+	font-weight: bold; 
+	color: #00f; 
+}
+
+#new-quiz-details-box #with-practice {
+	clear: both;
+	padding-top: 10px;
+}
+
+#new-quiz-details-box #without-practice {
+	clear: both;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+#new-quiz-details-box #with-practice li {
+	display: inline;
+}
+
+#new-quiz-details-box #without-practice li {
+	display: inline;
+	margin: 0 12px 0 12px;
+}
+
+#quiz-stats-box {	
+	float: right; 
+	/*old width: 220px;*/
+	width: 190px;
+	margin-right: 5px;
+}
+
+#quiz-stats-box span {	
+	font-weight: bold; 
+	color: #00f;
+}
+
+#quiz-stats-box p {
+	margin-bottom: 5px; 
+}
+
+#quiz-stats-box ul {	
+	list-style-type: none; 
+}
+
+#quiz-stats-box ul li {	
+	font-size: 16px;
+	margin-bottom: 3px;
+}
+
+#quiz-leaderboard { 
+	float: left;
+	padding-top: 21px;
+	padding-left: 5px;
+}
+
+#tabbed-quiz-leader-box {
+	width: 333px;
+	height: 441px; /*441px old*/
+}
+
+#tabbed-quiz-leader-box .tabbed-content {
+	/*overflow-x: scroll;*/
+}
+
+#tabbed-quiz-leader-box .tabs li a {
+	width: 110px; 
+}
+
+#your-leaderboard {
+	float: right;
+	margin-right: 10px; 
+	padding-top: 25px; 
+}
+
+#your-leaderboard h2 {
+	text-align: center;
+}
+
+#your-leaderboard .box {
+	width: 220px;
+	height: 345px;
+	overflow-y: scroll;
+}
+
+#admin-buttons-quiz {
+	clear: right;
+	float: right; 
+	padding-top: 20px;
+	padding-right: 40px;
+	padding-bottom: 20px;
+}
+
+#admin-buttons-quiz ul {
+	padding-left: 27px;
+
+}
+
+#admin-buttons-quiz ul li {
+	display: inline;
+
+}
+
+#admin-buttons-quiz p {
+	text-align: center; 
+	font-family: DoodlePenLimited;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For Search Box */
+/* Code adapted from a tutorial here: http://goo.gl/ATmDE */
+
+#search {
+	float: left;
+	margin-top: 10px;
+	margin-left: 400px; 
+}
+
+#search input[type="text"] {
+	outline: none; 
+    background: url('../images/search-white.png') no-repeat 10px 6px #fcfcfc;
+    border: 1px solid #d1d1d1;
+    font: 12px  "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", sans-serif; 
+    /*font: bold 12px Arial,Helvetica,Sans-serif;*/
+    color: #bebebe;
+    width: 100px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+#search input[type="text"]:focus {
+    width: 150px;
+}
+
+
+
+
+
+
+
+
+/* Message Popups */
+
+.messagepop {
+	background-color:#FFFFFF;
+	border:1px solid #999999;
+	cursor:default;  
+	margin-top: 150px;
+	position:absolute;
+	text-align:left;
+	z-index:50;
+	
+	/* Change this */
+	padding: 25px 25px 20px;
+}
+
+#message-pop {
+	width:394px;
+	height:240px;
+	display:none;
+	visibility: hidden;  
+}
+
+#friend-pop {
+	width:180px;
+	height:110px;
+	display:none;
+	visibility: hidden;  
+}
+
+#announce-pop {
+	width:394px;
+	height:120px;
+	display:none;
+	visibility: hidden;  
+}
+		
+label {
+	display: block;
+	margin-bottom: 3px;
+	padding-left: 15px;
+	text-indent: -15px;
+}
+		
+.messagepop p, .messagepop.div {
+	border-bottom: 1px solid #EFEFEF;
+	margin: 8px 0;
+	padding-bottom: 8px;
+}
+
+#send-buttons-row {
+	float: right; 
+}
+
+#friend-buttons-row {
+	float: left;
+	margin-left: 44px;
+}
+
+#send-message label {
+	padding-left: 18px; 
+	font-size: 16px;
+}
+
+.formBox {
+	border-radius: .4em;
+	-webkit-border-radius: .4em; 
+	-moz-border-radius: .4em;
+	border: 2px solid #c9c2c1;
+ 	border-top: 2px solid #999999;
+	font-size: 14px;
+	padding: .3em;
+}
+
+
+
+
+
+
+
+
+/* Login popups */
+
+#incorrect-login-pop {
+	width:270px;
+	height:85px;
+    display:none;
+	visibility: hidden;
+}
+
+#incorrect-login-buttons-row {
+	float: left;
+	margin-left: 77px;
+}
+
+#incorrect-creation-pop {
+	width:270px;
+	height:85px;
+	display:none;
+	visibility: hidden;
+}
+
+#incorrect-creation-buttons-row {
+	float: left;
+	margin-left: 77px;
+}
+
+#delete-icon {
+	text-decoration: none;
+	border: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* Qwizzes Selection Page */
+
+#quiz-stuff-l {
+	float: left; 
+	text-align: center; 
+}
+
+#quiz-stuff-r {
+	float: right;
+	text-align: center;
+	/*padding-top: 21px;*/
+}
+
+#quiz-selector-l {
+	float: left;
+	width: 285px;
+	height: 200px; 
+	overflow-y: scroll;
+	border: 2px solid black; 
+}
+
+#quiz-selector-r {
+	float: right;
+	width: 285px;
+	height: 200px; 
+	overflow-y: scroll;
+	border: 2px solid black; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* "Winter Blues" CSS theme for CSS Table Gallery (http://icant.co.uk/csstablegallery/) by Gunta Klavina (http://www.klavina.com) */
+
+table {
+	font: 85% "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", sans-serif;
+	padding: 0; 
+	margin: 0; 
+	border-collapse: collapse; 
+	color: #333; 
+	background: #F3F5F7;
+}
+
+table a {
+	color: #3A4856; 
+	text-decoration: none; 
+	border-bottom: 1px solid #C6C8CB;
+}  
+
+table a:visited {
+	color: #777;
+}
+
+table a:hover {
+	color: #000;
+}  
+
+table caption {
+	text-align: left;
+	text-transform: uppercase;
+	padding-bottom: 10px; 
+	font: 200% "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", sans-serif;
+}
+
+table thead th {
+	background: #3A4856; 
+	padding: 15px 10px; 
+	color: #fff; 
+	text-align: left; 
+	font-weight: normal;
+}
+
+table tbody, table thead {
+	/*border-left: 1px solid #EAECEE;
+	border-right: 1px solid #EAECEE;*/
+}
+
+table tbody {
+	border-bottom: 1px solid #EAECEE;
+}
+                      
+table tbody td, table tbody th {
+	padding: 10px; 
+	background: url("../images/td_back.gif") repeat-x; 
+	text-align: left;
+}
+
+table tbody tr {
+	background: #F3F5F7;
+}
+
+table tbody tr.odd {
+	background: #F0F2F4;
+}
+
+table tbody  tr:hover {
+	background: #EAECEE; 
+	color: #111;
+}
+
+table tfoot td, table tfoot th, table tfoot tr {
+	text-align: left; 
+	font: 120%  "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", sans-serif; 
+	text-transform: uppercase; 
+	background: #fff; 
+	padding: 10px;
+}
+
+
+
+
+
+
+
+/* Quiz Creation Page (James) */
+
+#quiz-details-box {
+	padding-bottom: 30px;
+}
+
+#quiz-details-box .button {
+	float: right;
+	margin-right: 60px;
+}
+
+
+
+
+
+
+
+/* Search Results Page */
+
+#search-results ul li {
+	font-size: 14px; 
+}
+
+
+
+
+
+
+
+
